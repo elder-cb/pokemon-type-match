@@ -1,0 +1,6 @@
+<ng-container [ngSwitch]="effectiveness">
+  <div class="effectiveness immune" *ngSwitchCase="Immune">&#10799;</div>
+  <div class="effectiveness weak" *ngSwitchCase="Weak">&#9650;</div>
+  <div class="effectiveness super-effective" *ngSwitchCase="SuperEffective">&#10687;</div>
+  <div class="effectiveness normal" *ngSwitchDefault> </div>
+</ng-container>

@@ -1,0 +1,44 @@
+<div class="grid">
+  <div class="row header">
+    <div class="col corner">
+      <div class="label defender">&#x2B0B; Defender</div>
+      <div class="label attacker">Attacker &#x2B0A;</div>
+    </div>
+    <div class="col header" *ngFor="let typeX of types; let x = index"
+         [class.highlightX]="isHighlightX(x)"
+         [class.hoverX]="x === hoveredX"
+         (mouseenter)="onMouseEnter(x, undefined)"
+         (mouseleave)="onMouseLeave(x, undefined)"
+         (click)="onClick(x, undefined)"
+    >
+      <div>
+        <span class="icon type-{{ typeX | lowercase }}"></span>
+        <span>{{ typeX }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngFor="let typeY of types; let y = index">
+    <div class="col header type-{{typeY}}"
+         [class.highlightY]="isHighlightY(y)"
+         [class.hoverY]="y === hoveredY"
+         (mouseenter)="onMouseEnter(undefined, y)"
+         (mouseleave)="onMouseLeave(undefined, y)"
+         (click)="onClick( undefined, y)">
+      <div>
+        <span>{{ typeY }}</span>
+        <span class="icon type-{{ typeY | lowercase }}"></span>
+      </div>
+    </div>
+    <div class="col" *ngFor="let typeX of types; let x = index"
+         [class.highlightX]="isHighlightX(x)"
+         [class.highlightY]="isHighlightY(y)"
+         [class.hoverX]="x === hoveredX"
+         [class.hoverY]="y === hoveredY"
+         (mouseenter)="onMouseEnter(x, y)"
+         (mouseleave)="onMouseLeave(x, y)"
+         (click)="onClick(x, y)"
+    >
+      <pkmtm-effectiveness-icon [effectiveness]="getEffectiveness(typeY, typeX)"></pkmtm-effectiveness-icon>
+    </div>
+  </div>
+</div>

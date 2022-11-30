@@ -1,0 +1,118 @@
+.grid {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+
+  .row {
+    display: table-row;
+
+    &.header .col.header {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      padding: 0.5rem 0;
+    }
+
+    .col {
+      display: table-cell;
+      border: 1px solid black;
+      line-height: 1.5rem;
+      text-align: center;
+
+      &.corner {
+        position: relative;
+        font-size: 0.8rem;
+        line-height: 1rem;
+
+        &::after {
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 1rem;
+          bottom: 1rem;
+          content: '';
+          background-image: url(/assets/icons8-fight-pokemon-96.png);
+          background-size: contain;
+        }
+
+        .defender {
+          writing-mode: vertical-lr;
+          transform: rotate(180deg);
+          position: absolute;
+          right: 0;
+          top: 0.2rem;
+          text-align: right;
+        }
+
+        .attacker {
+          position: absolute;
+          bottom: 0;
+          left: 0.2rem;
+          text-align: left;
+        }
+      }
+
+      &.header {
+        font-weight: bold;
+        padding: 0 0.5rem;
+        >div {
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+        }
+      }
+
+      $attackerColour: #faa;
+      $defenderColour: #aaf;
+
+      &.hoverX {
+        background-color: lighten($defenderColour, 10);
+      }
+
+      &.hoverY {
+        background-color: lighten($attackerColour, 10);
+      }
+
+      &.highlightX {
+        background-color: $defenderColour;
+      }
+
+      &.highlightY {
+        background-color: $attackerColour;
+      }
+
+      &.hoverY.highlightX,
+      &.highlightY.hoverX,
+      &.highlightY.highlightX {
+        background-color: #afa;
+      }
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-top;
+
+  &.type-bug       {background-image: url(/assets/icon_bug.svg);}
+  &.type-dark      {background-image: url(/assets/icon_dark.svg);}
+  &.type-dragon    {background-image: url(/assets/icon_dragon.svg);}
+  &.type-electric  {background-image: url(/assets/icon_electric.svg);}
+  &.type-fairy     {background-image: url(/assets/icon_fairy.svg);}
+  &.type-fighting  {background-image: url(/assets/icon_fighting.svg);}
+  &.type-fire      {background-image: url(/assets/icon_fire.svg);}
+  &.type-flying    {background-image: url(/assets/icon_flying.svg);}
+  &.type-ghost     {background-image: url(/assets/icon_ghost.svg);}
+  &.type-grass     {background-image: url(/assets/icon_grass.svg);}
+  &.type-ground    {background-image: url(/assets/icon_ground.svg);}
+  &.type-ice       {background-image: url(/assets/icon_ice.svg);}
+  &.type-normal    {background-image: url(/assets/icon_normal.svg);}
+  &.type-poison    {background-image: url(/assets/icon_poison.svg);}
+  &.type-psychic   {background-image: url(/assets/icon_psychic.svg);}
+  &.type-rock      {background-image: url(/assets/icon_rock.svg);}
+  &.type-steel     {background-image: url(/assets/icon_steel.svg);}
+  &.type-water     {background-image: url(/assets/icon_water.svg);}
+}

@@ -1,0 +1,41 @@
+export enum PokeType {
+  Normal = 'Normal',
+  Fire = 'Fire',
+  Water = 'Water',
+  Electric = 'Electric',
+  Grass = 'Grass',
+  Ice = 'Ice',
+  Fighting = 'Fighting',
+  Poison = 'Poison',
+  Ground = 'Ground',
+  Flying = 'Flying',
+  Psychic = 'Psychic',
+  Bug = 'Bug',
+  Rock = 'Rock',
+  Ghost = 'Ghost',
+  Dragon = 'Dragon',
+  Dark = 'Dark',
+  Steel = 'Steel',
+  Fairy = 'Fairy'
+}
+
+export const TypeList = [
+  PokeType.Normal,
+  PokeType.Fire,
+  PokeType.Water,
+  PokeType.Electric,
+  PokeType.Grass,
+  PokeType.Ice,
+  PokeType.Fighting,
+  PokeType.Poison,
+  PokeType.Ground,
+  PokeType.Flying,
+  PokeType.Psychic,
+  PokeType.Bug,
+  PokeType.Rock,
+  PokeType.Ghost,
+  PokeType.Dragon,
+  PokeType.Dark,
+  PokeType.Steel,
+  PokeType.Fairy
+]
