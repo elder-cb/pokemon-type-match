@@ -32,7 +32,7 @@
           right: 1rem;
           bottom: 1rem;
           content: '';
-          background-image: url(/assets/icons8-fight-pokemon-96.png);
+          background-image: url(../../assets/icons8-fight-pokemon-96.png);
           background-size: contain;
         }
 
@@ -97,22 +97,22 @@
   height: 1rem;
   vertical-align: text-top;
 
-  &.type-bug       {background-image: url(/assets/icon_bug.svg);}
-  &.type-dark      {background-image: url(/assets/icon_dark.svg);}
-  &.type-dragon    {background-image: url(/assets/icon_dragon.svg);}
-  &.type-electric  {background-image: url(/assets/icon_electric.svg);}
-  &.type-fairy     {background-image: url(/assets/icon_fairy.svg);}
-  &.type-fighting  {background-image: url(/assets/icon_fighting.svg);}
-  &.type-fire      {background-image: url(/assets/icon_fire.svg);}
-  &.type-flying    {background-image: url(/assets/icon_flying.svg);}
-  &.type-ghost     {background-image: url(/assets/icon_ghost.svg);}
-  &.type-grass     {background-image: url(/assets/icon_grass.svg);}
-  &.type-ground    {background-image: url(/assets/icon_ground.svg);}
-  &.type-ice       {background-image: url(/assets/icon_ice.svg);}
-  &.type-normal    {background-image: url(/assets/icon_normal.svg);}
-  &.type-poison    {background-image: url(/assets/icon_poison.svg);}
-  &.type-psychic   {background-image: url(/assets/icon_psychic.svg);}
-  &.type-rock      {background-image: url(/assets/icon_rock.svg);}
-  &.type-steel     {background-image: url(/assets/icon_steel.svg);}
-  &.type-water     {background-image: url(/assets/icon_water.svg);}
+  &.type-bug       {background-image: url(../../assets/icon_bug.svg);}
+  &.type-dark      {background-image: url(../../assets/icon_dark.svg);}
+  &.type-dragon    {background-image: url(../../assets/icon_dragon.svg);}
+  &.type-electric  {background-image: url(../../assets/icon_electric.svg);}
+  &.type-fairy     {background-image: url(../../assets/icon_fairy.svg);}
+  &.type-fighting  {background-image: url(../../assets/icon_fighting.svg);}
+  &.type-fire      {background-image: url(../../assets/icon_fire.svg);}
+  &.type-flying    {background-image: url(../../assets/icon_flying.svg);}
+  &.type-ghost     {background-image: url(../../assets/icon_ghost.svg);}
+  &.type-grass     {background-image: url(../../assets/icon_grass.svg);}
+  &.type-ground    {background-image: url(../../assets/icon_ground.svg);}
+  &.type-ice       {background-image: url(../../assets/icon_ice.svg);}
+  &.type-normal    {background-image: url(../../assets/icon_normal.svg);}
+  &.type-poison    {background-image: url(../../assets/icon_poison.svg);}
+  &.type-psychic   {background-image: url(../../assets/icon_psychic.svg);}
+  &.type-rock      {background-image: url(../../assets/icon_rock.svg);}
+  &.type-steel     {background-image: url(../../assets/icon_steel.svg);}
+  &.type-water     {background-image: url(../../assets/icon_water.svg);}
 }
