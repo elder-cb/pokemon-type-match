@@ -6,6 +6,8 @@ Hovering the table will highlight both the row and the column, clicking on a cel
 
 Click again on the same cell to deselect both row and column, or click just on the selected column or row header to deselect them.
 
+Multiple columns and/or rows can be selected at the same time to allow multiple comparisons also on mobile.
+
 ## Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.

@@ -12,8 +12,8 @@ export class TypesGridComponent implements OnInit {
   types = TypeList
   hoveredX?: number
   hoveredY?: number
-  selectedX?: number
-  selectedY?: number
+  selectedX: boolean[] = []
+  selectedY: boolean[] = []
 
   ngOnInit(): void {
     console.log(this.types)
@@ -38,8 +38,8 @@ export class TypesGridComponent implements OnInit {
     return this.isHighlighted(y, this.selectedY, this.hoveredY)
   }
 
-  isHighlighted(index: number, selectedIndex?: number, hoveredIndex?: number): boolean {
-    if (selectedIndex !== undefined) return index === selectedIndex
+  isHighlighted(index: number, selectedIndexes: boolean[], hoveredIndex?: number): boolean {
+    if (selectedIndexes[index] !== undefined) return selectedIndexes[index]
     return hoveredIndex === index
   }
 
@@ -54,22 +54,17 @@ export class TypesGridComponent implements OnInit {
   }
 
   onClick(x?: number, y?: number): void {
-    if (this.selectedX === x && this.selectedY === y) {
-      this.selectedX = undefined
-      this.selectedY = undefined
+    if (x !== undefined && y !== undefined &&
+      this.selectedX[x] && this.selectedY[y]) {
+      this.selectedX[x] = false
+      this.selectedY[y] = false
     } else {
       if (x !== undefined) {
-        if (this.selectedX === x && y === undefined)
-          this.selectedX = undefined
-        else
-          this.selectedX = x
+        this.selectedX[x] = !(this.selectedX[x] && y === undefined)
       }
 
       if (y !== undefined) {
-        if (this.selectedY === y && x === undefined)
-          this.selectedY = undefined
-        else
-          this.selectedY = y
+        this.selectedY[y] = !(this.selectedY[y] && x === undefined)
       }
     }
   }
